@@ -532,7 +532,7 @@ while b == True:
                 v % 2 == 0:
 
                     h = a.copy()
-                    h.paste((0, 200, 200), (236 + z, 70 + y, 565 + z, 150 + y))
+                    h.paste((255, 223, 0), (236 + z, 70 + y, 565 + z, 150 + y))
                     h.paste((30, 31, 37), (150, 70, 153, 1146))
                     h.paste((30, 31, 37), (233, 70, 236, 1146))
                     h.paste((30, 31, 37), (316, 70, 319, 1146))
@@ -585,10 +585,10 @@ while b == True:
 
                                 if v % 2 == 0:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36,42) and \
-                                    a.getpixel((527 + z, 71 + y)) == (35, 36,42):
+                                    if a.getpixel((195 + z, 71 + y)) == (35, 36, 42) and \
+                                    a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
+                                    a.getpixel((361 + z, 71 + y)) == (35, 36,42) and \
+                                    a.getpixel((444 + z, 71 + y)) == (35, 36,42):
 
                                         z += -83
 
@@ -612,7 +612,6 @@ while b == True:
 
                                         v += 1
                                         y += -249
-                                        z += 83
 
                                 elif v % 2 == 1:
 
@@ -621,43 +620,43 @@ while b == True:
                                     a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((527 + z, 237 + y)) == (35, 36, 42):
 
+                                        y += 166
                                         v += 1
-                                        y += 249
-                                        z += -83
 
                                     elif a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((527 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((610 + z, 237 + y)) == (35, 36, 42):
 
+                                        z += 83
+                                        y += 166
                                         v += 1
-                                        y += 249
 
                                     elif a.getpixel((195 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((444 + z, 237 + y)) == (35, 36, 42):
 
-                                        v += 1
-                                        y += 249
+                                        y += 166
                                         z += -83
+                                        v += 1
 
                                     elif a.getpixel((112 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((610 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((693 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((776 + z, 237 + y)) == (35, 36, 42):
+                                    a.getpixel((195 + z, 237 + y)) == (35, 36, 42) and \
+                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
+                                    a.getpixel((361 + z, 237 + y)) == (35, 36, 42):
 
-                                        v += 1
-                                        y += 249
+                                        y += 166
                                         z += -166
+                                        v += 1
 
                     except Exception:
                         pass
 
-                while a.getpixel((320 + z, 278 + y)) == (35, 36, 42) and v == 2:
+                while a.getpixel((320 + z, 320 + y)) == (35, 36, 42) and v % 2 == 1:
 
                     h = a.copy()
-                    h.paste((0, 180, 255), (319 + z, 70 + y, 399 + z, 316 + y))
+                    h.paste((255, 223, 0), (319 + z, 70 + y, 399 + z, 399 + y))
                     h.paste((30, 31, 37), (150, 70, 153, 1146))
                     h.paste((30, 31, 37), (233, 70, 236, 1146))
                     h.paste((30, 31, 37), (316, 70, 319, 1146))
@@ -717,10 +716,10 @@ while b == True:
                                         z += -83
                                 elif v % 2 == 0:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
+                                    if a.getpixel((195 + z, 71 + y)) == (35, 36, 42) and \
+                                    a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
                                     a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 71 + y)) == (35, 36, 42):
+                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
 
                                         z += -83
 
@@ -733,7 +732,6 @@ while b == True:
                                     a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((527 + z, 237 + y)) == (35, 36, 42):
 
-                                        z += -83
                                         y += 166
                                         v += 1
 
@@ -742,6 +740,7 @@ while b == True:
                                     a.getpixel((527 + z, 237 + y)) == (35, 36, 42) and \
                                     a.getpixel((610 + z, 237 + y)) == (35, 36, 42):
 
+                                        z += 83
                                         y += 166
                                         v += 1
 
@@ -763,16 +762,16 @@ while b == True:
                                         z += -166
                                         v += 1
 
-                                if v % 2 == 0:
+                                elif v % 2 == 0:
 
-                                    if a.getpixel((444 + z, -95 + y)) == (35, 36, 42) and \
+                                    if a.getpixel((444 + z, -178 + y)) == (35, 36, 42) and \
+                                    a.getpixel((444 + z, -95 + y)) == (35, 36, 42) and \
                                     a.getpixel((444 + z, -12 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42):
+                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
 
-                                        y += -166
-                                        z += 83
                                         v += 1
+                                        y += -249
+                                print(v)
 
                     except Exception:
                         pass
