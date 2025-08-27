@@ -2,77 +2,76 @@ from PIL import Image
 from random import choice
 from inputimeout import inputimeout
 
-a = Image.new(('RGB'), (801,1216), (255,255,255))
-a.paste((30, 31, 37),(0, 0, 801, 1216))
-a.paste((28, 29, 35),(5, 5, 796, 1211))
-a.paste((26, 27, 33),(10, 10, 791, 1206))
-a.paste((25, 26, 32),(15, 15, 786, 1201))
-a.paste((26, 27, 33),(55, 55, 746, 1161))
-a.paste((27, 28, 34),(60, 60, 741, 1156))
-a.paste((30, 31, 37),(65, 65, 736, 1151))
-a.paste((35, 36, 42),(70, 70, 731, 1146))
-a.paste((30, 31, 37),(150,70,153,1146))
-a.paste((30, 31, 37),(233,70,236,1146))
-a.paste((30, 31, 37),(316,70,319,1146))
-a.paste((30, 31, 37),(399,70,402,1146))
-a.paste((30, 31, 37),(482,70,485,1146))
-a.paste((30, 31, 37),(565,70,568,1146))
-a.paste((30, 31, 37),(648,70,651,1146))
-a.paste((30, 31, 37),(70,150,731,153))
-a.paste((30, 31, 37),(70,233,731,236))
-a.paste((30, 31, 37),(70,316,731,319))
-a.paste((30, 31, 37),(70,399,731,402))
-a.paste((30, 31, 37),(70,482,731,485))
-a.paste((30, 31, 37),(70,565,731,568))
-a.paste((30, 31, 37),(70,648,731,651))
-a.paste((30, 31, 37),(70,731,731,734))
-a.paste((30, 31, 37),(70,814,731,817))
-a.paste((30, 31, 37),(70,897,731,900))
-a.paste((30, 31, 37),(70,980,731,983))
-a.paste((30, 31, 37),(70,1063,731,1066))
+original_photo = Image.new(('RGB'), (801, 1216), (255, 255, 255))
+original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
 
-b = True
-n = 0
+the_starting_point = True
+score = 0
 
-while b == True:
+while the_starting_point == True:
 
-    print(n)
-    c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ,12, 13]
-    d = choice(c)
-    h = None
-    z = 0
-    y = 0
-    u = 0
-    v = 0
-    w = 0
+    print(score)
+    List_of_shapes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 , 12, 13]
+    random_shape = choice(List_of_shapes)
+    sub_photo = None
+    width = 0
+    length = 0
+    revolutions = 0
+    doop_determinant = 0
 
-    if d == 1:
+    if random_shape == 1:
 
-        while a.getpixel((361 + z, 71 + y)) == (35, 36, 42):
+        while original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42):
 
-            h = a.copy()
-            h.paste((0, 200, 0), (319 + z, 70 + y, 399 + z, 150 + y))
-            h.paste((30, 31, 37), (150, 70, 153, 1146))
-            h.paste((30, 31, 37), (233, 70, 236, 1146))
-            h.paste((30, 31, 37), (316, 70, 319, 1146))
-            h.paste((30, 31, 37), (399, 70, 402, 1146))
-            h.paste((30, 31, 37), (482, 70, 485, 1146))
-            h.paste((30, 31, 37), (565, 70, 568, 1146))
-            h.paste((30, 31, 37), (648, 70, 651, 1146))
-            h.paste((30, 31, 37), (70, 150, 731, 153))
-            h.paste((30, 31, 37), (70, 233, 731, 236))
-            h.paste((30, 31, 37), (70, 316, 731, 319))
-            h.paste((30, 31, 37), (70, 399, 731, 402))
-            h.paste((30, 31, 37), (70, 482, 731, 485))
-            h.paste((30, 31, 37), (70, 565, 731, 568))
-            h.paste((30, 31, 37), (70, 648, 731, 651))
-            h.paste((30, 31, 37), (70, 731, 731, 734))
-            h.paste((30, 31, 37), (70, 814, 731, 817))
-            h.paste((30, 31, 37), (70, 897, 731, 900))
-            h.paste((30, 31, 37), (70, 980, 731, 983))
-            h.paste((30, 31, 37), (70, 1063, 731, 1066))
-            y += 83
-            h.show()
+            sub_photo = original_photo.copy()
+            sub_photo.paste((0, 200, 0), (319 + width, 70 + length, 399 + width, 150 + length))
+            sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            length += 83
+            sub_photo.show()
 
             try:
 
@@ -81,59 +80,59 @@ while b == True:
 
                     if answer[i] == 'd':
 
-                        if a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                        if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                            z += 83
+                            width += 83
 
                     elif answer[i] == 'a':
 
-                        if a.getpixel((278 + z, 71 + y)) == (35, 36, 42):
+                        if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42):
 
-                            z += -83
+                            width += -83
 
             except Exception:
                 pass
 
-        a = h.copy()
-        h = None
-        z = 0
-        y = 0
-        u = 0
+        original_photo = sub_photo.copy()
+        sub_photo = None
+        width = 0
+        length = 0
+        revolutions = 0
 
-    if d == 2:
+    if random_shape == 2:
 
-        while a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-        u != 100:
+        while original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+        revolutions != 100:
 
             try:
 
-                while a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                v % 2 == 0:
+                while original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                doop_determinant % 2 == 0:
 
-                    h = a.copy()
-                    h.paste((255, 180, 50), (319 + z, 70 + y, 482 + z, 150 + y))
-                    h.paste((30, 31, 37), (150, 70, 153, 1146))
-                    h.paste((30, 31, 37), (233, 70, 236, 1146))
-                    h.paste((30, 31, 37), (316, 70, 319, 1146))
-                    h.paste((30, 31, 37), (399, 70, 402, 1146))
-                    h.paste((30, 31, 37), (482, 70, 485, 1146))
-                    h.paste((30, 31, 37), (565, 70, 568, 1146))
-                    h.paste((30, 31, 37), (648, 70, 651, 1146))
-                    h.paste((30, 31, 37), (70, 150, 731, 153))
-                    h.paste((30, 31, 37), (70, 233, 731, 236))
-                    h.paste((30, 31, 37), (70, 316, 731, 319))
-                    h.paste((30, 31, 37), (70, 399, 731, 402))
-                    h.paste((30, 31, 37), (70, 482, 731, 485))
-                    h.paste((30, 31, 37), (70, 565, 731, 568))
-                    h.paste((30, 31, 37), (70, 648, 731, 651))
-                    h.paste((30, 31, 37), (70, 731, 731, 734))
-                    h.paste((30, 31, 37), (70, 814, 731, 817))
-                    h.paste((30, 31, 37), (70, 897, 731, 900))
-                    h.paste((30, 31, 37), (70, 980, 731, 983))
-                    h.paste((30, 31, 37), (70, 1063, 731, 1066))
-                    y += 83
-                    h.show()
+                    sub_photo = original_photo.copy()
+                    sub_photo.paste((255, 180, 50), (319 + width, 70 + length, 482 + width, 150 + length))
+                    sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+                    sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+                    sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+                    sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+                    sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+                    sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+                    sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+                    sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+                    sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+                    sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+                    sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+                    sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+                    sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+                    sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+                    sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+                    sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+                    sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+                    sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+                    sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+                    length += 83
+                    sub_photo.show()
 
                     try:
 
@@ -142,83 +141,83 @@ while b == True:
 
                             if answer[i] == 'd':
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((527 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
                             elif answer[i] == 'a':
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
                             elif answer[i] in ['s','w']:
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
 
-                                        y += -83
-                                        v += 1
+                                        length += -83
+                                        doop_determinant += 1
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        y += 83
-                                        v += 1
+                                        length += 83
+                                        doop_determinant += 1
 
                     except Exception:
                         pass
 
-                while a.getpixel((361 + z, 154 + y)) == (35, 36, 42) and \
-                v % 2 == 1:
+                while original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                doop_determinant % 2 == 1:
 
-                    h = a.copy()
-                    h.paste((255, 180, 50), (319 + z, 70 + y, 399 + z, 233 + y))
-                    h.paste((30, 31, 37), (150, 70, 153, 1146))
-                    h.paste((30, 31, 37), (233, 70, 236, 1146))
-                    h.paste((30, 31, 37), (316, 70, 319, 1146))
-                    h.paste((30, 31, 37), (399, 70, 402, 1146))
-                    h.paste((30, 31, 37), (482, 70, 485, 1146))
-                    h.paste((30, 31, 37), (565, 70, 568, 1146))
-                    h.paste((30, 31, 37), (648, 70, 651, 1146))
-                    h.paste((30, 31, 37), (70, 150, 731, 153))
-                    h.paste((30, 31, 37), (70, 233, 731, 236))
-                    h.paste((30, 31, 37), (70, 316, 731, 319))
-                    h.paste((30, 31, 37), (70, 399, 731, 402))
-                    h.paste((30, 31, 37), (70, 482, 731, 485))
-                    h.paste((30, 31, 37), (70, 565, 731, 568))
-                    h.paste((30, 31, 37), (70, 648, 731, 651))
-                    h.paste((30, 31, 37), (70, 731, 731, 734))
-                    h.paste((30, 31, 37), (70, 814, 731, 817))
-                    h.paste((30, 31, 37), (70, 897, 731, 900))
-                    h.paste((30, 31, 37), (70, 980, 731, 983))
-                    h.paste((30, 31, 37), (70, 1063, 731, 1066))
-                    y += 83
-                    h.show()
+                    sub_photo = original_photo.copy()
+                    sub_photo.paste((255, 180, 50), (319 + width, 70 + length, 399 + width, 233 + length))
+                    sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+                    sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+                    sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+                    sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+                    sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+                    sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+                    sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+                    sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+                    sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+                    sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+                    sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+                    sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+                    sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+                    sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+                    sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+                    sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+                    sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+                    sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+                    sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+                    length += 83
+                    sub_photo.show()
 
                     try:
 
@@ -227,109 +226,109 @@ while b == True:
 
                             if answer[i] == 'd':
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
-                                elif v % 2 == 0:
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((527 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
                             elif answer[i] == 'a':
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
-                                elif v % 2 == 0:
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
                             elif answer[i] in ['s','w']:
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        v += 1
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42):
 
-                                        v += 1
-                                        z += -83
+                                        doop_determinant += 1
+                                        width += -83
 
-                                elif v % 2 == 0:
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
 
-                                        v += 1
+                                        doop_determinant += 1
 
                     except Exception:
                         pass
-                u += 1
+                revolutions += 1
 
             except Exception:
                 pass
 
         w = 0
-        z = 0
-        y = 0
-        a = h.copy()
-        h = None
-        u = 0
-        v = 0
+        width = 0
+        length = 0
+        original_photo = sub_photo.copy()
+        sub_photo = None
+        revolutions = 0
+        doop_determinant = 0
 
-    if d == 3:
+    if random_shape == 3:
 
-        while a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-        u != 100:
+        while original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+        revolutions != 100:
 
             try:
 
-                while a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                 a.getpixel((444 + z, 71 + y)) == (35, 36,42) and \
-                a.getpixel((527 + z, 71 + y)) == (35, 36,42) and \
-                v % 2 == 0:
+                while original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                 original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                doop_determinant % 2 == 0:
 
-                    h = a.copy()
-                    h.paste((0, 180, 255), (319 + z, 70 + y, 565 + z, 150 + y))
-                    h.paste((30, 31, 37), (150, 70, 153, 1146))
-                    h.paste((30, 31, 37), (233, 70, 236, 1146))
-                    h.paste((30, 31, 37), (316, 70, 319, 1146))
-                    h.paste((30, 31, 37), (399, 70, 402, 1146))
-                    h.paste((30, 31, 37), (482, 70, 485, 1146))
-                    h.paste((30, 31, 37), (565, 70, 568, 1146))
-                    h.paste((30, 31, 37), (648, 70, 651, 1146))
-                    h.paste((30, 31, 37), (70, 150, 731, 153))
-                    h.paste((30, 31, 37), (70, 233, 731, 236))
-                    h.paste((30, 31, 37), (70, 316, 731, 319))
-                    h.paste((30, 31, 37), (70, 399, 731, 402))
-                    h.paste((30, 31, 37), (70, 482, 731, 485))
-                    h.paste((30, 31, 37), (70, 565, 731, 568))
-                    h.paste((30, 31, 37), (70, 648, 731, 651))
-                    h.paste((30, 31, 37), (70, 731, 731, 734))
-                    h.paste((30, 31, 37), (70, 814, 731, 817))
-                    h.paste((30, 31, 37), (70, 897, 731, 900))
-                    h.paste((30, 31, 37), (70, 980, 731, 983))
-                    h.paste((30, 31, 37), (70, 1063, 731, 1066))
-                    y += 83
+                    sub_photo = original_photo.copy()
+                    sub_photo.paste((0, 180, 255), (319 + width, 70 + length, 565 + width, 150 + length))
+                    sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+                    sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+                    sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+                    sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+                    sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+                    sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+                    sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+                    sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+                    sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+                    sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+                    sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+                    sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+                    sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+                    sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+                    sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+                    sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+                    sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+                    sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+                    sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+                    length += 83
                     w += 1
-                    h.show()
+                    sub_photo.show()
 
                     try:
 
@@ -338,91 +337,91 @@ while b == True:
 
                             if answer[i] == 'd':
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((610 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((610 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
                             elif answer[i] == 'a':
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
                             elif answer[i] in ['s', 'w']:
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, -12 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, -95 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, -12 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, -95 + length)) == (35, 36, 42):
 
-                                        y += -166
-                                        z += 83
-                                        v += 1
+                                        length += -166
+                                        width += 83
+                                        doop_determinant += 1
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278+z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        y += 166
-                                        z += -83
-                                        v += 1
+                                        length += 166
+                                        width += -83
+                                        doop_determinant += 1
 
                     except Exception:
                         pass
 
-                while a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
-                v % 2 == 1:
+                while original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42) and \
+                doop_determinant % 2 == 1:
 
-                    h = a.copy()
-                    h.paste((0, 180, 255), (319 + z, 70 + y, 399 + z, 316 + y))
-                    h.paste((30, 31, 37), (150, 70, 153, 1146))
-                    h.paste((30, 31, 37), (233, 70, 236, 1146))
-                    h.paste((30, 31, 37), (316, 70, 319, 1146))
-                    h.paste((30, 31, 37), (399, 70, 402, 1146))
-                    h.paste((30, 31, 37), (482, 70, 485, 1146))
-                    h.paste((30, 31, 37), (565, 70, 568, 1146))
-                    h.paste((30, 31, 37), (648, 70, 651, 1146))
-                    h.paste((30, 31, 37), (70, 150, 731, 153))
-                    h.paste((30, 31, 37), (70, 233, 731, 236))
-                    h.paste((30, 31, 37), (70, 316, 731, 319))
-                    h.paste((30, 31, 37), (70, 399, 731, 402))
-                    h.paste((30, 31, 37), (70, 482, 731, 485))
-                    h.paste((30, 31, 37), (70, 565, 731, 568))
-                    h.paste((30, 31, 37), (70, 648, 731, 651))
-                    h.paste((30, 31, 37), (70, 731, 731, 734))
-                    h.paste((30, 31, 37), (70, 814, 731, 817))
-                    h.paste((30, 31, 37), (70, 897, 731, 900))
-                    h.paste((30, 31, 37), (70, 980, 731, 983))
-                    h.paste((30, 31, 37), (70, 1063, 731, 1066))
-                    y += 83
-                    h.show()
+                    sub_photo = original_photo.copy()
+                    sub_photo.paste((0, 180, 255), (319 + width, 70 + length, 399 + width, 316 + length))
+                    sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+                    sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+                    sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+                    sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+                    sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+                    sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+                    sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+                    sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+                    sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+                    sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+                    sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+                    sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+                    sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+                    sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+                    sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+                    sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+                    sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+                    sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+                    sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+                    length += 83
+                    sub_photo.show()
 
                     try:
 
@@ -431,130 +430,130 @@ while b == True:
 
                             if answer[i] == 'd':
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
-                                elif v % 2 == 0:
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((610 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((610 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
                             elif answer[i] == 'a':
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and\
-                                    a.getpixel((278 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and\
+                                    original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
-                                elif v % 2 == 0:
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36,42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
                             elif answer[i] in ['s', 'w']:
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
 
-                                        y += 83
-                                        z += -83
-                                        v += 1
+                                        length += 83
+                                        width += -83
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((195 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 154 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((195 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
 
-                                        y += 83
-                                        z += -166
-                                        v += 1
+                                        length += 83
+                                        width += -166
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((361 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 154 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 154 + length)) == (35, 36, 42):
 
-                                        y += 83
-                                        v += 1
+                                        length += 83
+                                        doop_determinant += 1
 
-                                elif v % 2 == 0:
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((278 + z, 154  +y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
 
-                                        y += -83
-                                        z += 83
-                                        v += 1
+                                        length += -83
+                                        width += 83
+                                        doop_determinant += 1
 
                     except Exception:
                         pass
 
-                u += 1
+                revolutions += 1
 
             except Exception:
                 pass
 
         w = 0
-        z = 0
-        y = 0
-        a = h.copy()
-        h = None
-        u = 0
-        v = 0
+        width = 0
+        length = 0
+        original_photo = sub_photo.copy()
+        sub_photo = None
+        revolutions = 0
+        doop_determinant = 0
 
-    if d == 4:
+    if random_shape == 4:
 
-        while a.getpixel((320 + z, 71 + y)) == (35, 36, 42) and \
-        u != 100:
+        while original_photo.getpixel((320 + width, 71 + length)) == (35, 36, 42) and \
+        revolutions != 100:
 
             try:
 
-                while a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                a.getpixel((444 + z, 71 + y)) == (35, 36,42) and \
-                a.getpixel((527 + z, 71 + y)) == (35, 36,42) and \
-                v % 2 == 0:
+                while original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                doop_determinant % 2 == 0:
 
-                    h = a.copy()
-                    h.paste((255, 223, 0), (236 + z, 70 + y, 565 + z, 150 + y))
-                    h.paste((30, 31, 37), (150, 70, 153, 1146))
-                    h.paste((30, 31, 37), (233, 70, 236, 1146))
-                    h.paste((30, 31, 37), (316, 70, 319, 1146))
-                    h.paste((30, 31, 37), (399, 70, 402, 1146))
-                    h.paste((30, 31, 37), (482, 70, 485, 1146))
-                    h.paste((30, 31, 37), (565, 70, 568, 1146))
-                    h.paste((30, 31, 37), (648, 70, 651, 1146))
-                    h.paste((30, 31, 37), (70, 150, 731, 153))
-                    h.paste((30, 31, 37), (70, 233, 731, 236))
-                    h.paste((30, 31, 37), (70, 316, 731, 319))
-                    h.paste((30, 31, 37), (70, 399, 731, 402))
-                    h.paste((30, 31, 37), (70, 482, 731, 485))
-                    h.paste((30, 31, 37), (70, 565, 731, 568))
-                    h.paste((30, 31, 37), (70, 648, 731, 651))
-                    h.paste((30, 31, 37), (70, 731, 731, 734))
-                    h.paste((30, 31, 37), (70, 814, 731, 817))
-                    h.paste((30, 31, 37), (70, 897, 731, 900))
-                    h.paste((30, 31, 37), (70, 980, 731, 983))
-                    h.paste((30, 31, 37), (70, 1063, 731, 1066))
-                    y += 83
+                    sub_photo = original_photo.copy()
+                    sub_photo.paste((255, 223, 0), (236 + width, 70 + length, 565 + width, 150 + length))
+                    sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+                    sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+                    sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+                    sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+                    sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+                    sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+                    sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+                    sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+                    sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+                    sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+                    sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+                    sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+                    sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+                    sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+                    sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+                    sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+                    sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+                    sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+                    sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+                    length += 83
                     w += 1
-                    h.show()
+                    sub_photo.show()
 
                     try:
 
@@ -563,121 +562,121 @@ while b == True:
 
                             if answer[i] == 'd':
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 71 + y)) == (35, 36,42) and \
-                                    a.getpixel((610 + z, 71 + y)) == (35, 36,42):
+                                    if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((610 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 320 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 320 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
                             elif answer[i] == 'a':
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((195 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36,42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36,42):
+                                    if original_photo.getpixel((195 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 320 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 320 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
                             elif answer[i] in ['s', 'w']:
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((444 + z, -178 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, -95 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, -12 + y)) == (35, 36,42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36,42):
+                                    if original_photo.getpixel((444 + width, -178 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, -95 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, -12 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        v += 1
-                                        y += -249
+                                        doop_determinant += 1
+                                        length += -249
 
-                                elif v % 2 == 1:
+                                elif doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 237 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 237 + length)) == (35, 36, 42):
 
-                                        y += 166
-                                        v += 1
+                                        length += 166
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((610 + z, 237 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((610 + width, 237 + length)) == (35, 36, 42):
 
-                                        z += 83
-                                        y += 166
-                                        v += 1
+                                        width += 83
+                                        length += 166
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((195 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((195 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42):
 
-                                        y += 166
-                                        z += -83
-                                        v += 1
+                                        length += 166
+                                        width += -83
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((112 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((195 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 237 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((112 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((195 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42):
 
-                                        y += 166
-                                        z += -166
-                                        v += 1
+                                        length += 166
+                                        width += -166
+                                        doop_determinant += 1
 
                     except Exception:
                         pass
 
-                while a.getpixel((320 + z, 320 + y)) == (35, 36, 42) and v % 2 == 1:
+                while original_photo.getpixel((320 + width, 320 + length)) == (35, 36, 42) and doop_determinant % 2 == 1:
 
-                    h = a.copy()
-                    h.paste((255, 223, 0), (319 + z, 70 + y, 399 + z, 399 + y))
-                    h.paste((30, 31, 37), (150, 70, 153, 1146))
-                    h.paste((30, 31, 37), (233, 70, 236, 1146))
-                    h.paste((30, 31, 37), (316, 70, 319, 1146))
-                    h.paste((30, 31, 37), (399, 70, 402, 1146))
-                    h.paste((30, 31, 37), (482, 70, 485, 1146))
-                    h.paste((30, 31, 37), (565, 70, 568, 1146))
-                    h.paste((30, 31, 37), (648, 70, 651, 1146))
-                    h.paste((30, 31, 37), (70, 150, 731, 153))
-                    h.paste((30, 31, 37), (70, 233, 731, 236))
-                    h.paste((30, 31, 37), (70, 316, 731, 319))
-                    h.paste((30, 31, 37), (70, 399, 731, 402))
-                    h.paste((30, 31, 37), (70, 482, 731, 485))
-                    h.paste((30, 31, 37), (70, 565, 731, 568))
-                    h.paste((30, 31, 37), (70, 648, 731, 651))
-                    h.paste((30, 31, 37), (70, 731, 731, 734))
-                    h.paste((30, 31, 37), (70, 814, 731, 817))
-                    h.paste((30, 31, 37), (70, 897, 731, 900))
-                    h.paste((30, 31, 37), (70, 980, 731, 983))
-                    h.paste((30, 31, 37), (70, 1063, 731, 1066))
-                    y += 83
-                    h.show()
+                    sub_photo = original_photo.copy()
+                    sub_photo.paste((255, 223, 0), (319 + width, 70 + length, 399 + width, 399 + length))
+                    sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+                    sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+                    sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+                    sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+                    sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+                    sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+                    sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+                    sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+                    sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+                    sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+                    sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+                    sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+                    sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+                    sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+                    sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+                    sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+                    sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+                    sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+                    sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+                    length += 83
+                    sub_photo.show()
 
                     try:
 
@@ -686,600 +685,600 @@ while b == True:
 
                             if answer[i] == 'd':
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 320 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 320 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
-                                if v % 2 == 0:
+                                if doop_determinant % 2 == 0:
 
-                                    if a.getpixel((444 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((610 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((793 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((610 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((793 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += 83
+                                        width += 83
 
                             elif answer[i] == 'a':
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 154 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 320 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 320 + length)) == (35, 36, 42):
 
-                                        z += -83
-                                elif v % 2 == 0:
+                                        width += -83
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((195 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 71 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((195 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        z += -83
+                                        width += -83
 
                             elif answer[i] in ['s', 'w']:
 
-                                if v % 2 == 1:
+                                if doop_determinant % 2 == 1:
 
-                                    if a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 237 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 237 + length)) == (35, 36, 42):
 
-                                        y += 166
-                                        v += 1
+                                        length += 166
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((527 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((610 + z, 237 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((527 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((610 + width, 237 + length)) == (35, 36, 42):
 
-                                        z += 83
-                                        y += 166
-                                        v += 1
+                                        width += 83
+                                        length += 166
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((195 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 237 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((195 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 237 + length)) == (35, 36, 42):
 
-                                        y += 166
-                                        z += -83
-                                        v += 1
+                                        length += 166
+                                        width += -83
+                                        doop_determinant += 1
 
-                                    elif a.getpixel((112 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((195 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((278 + z, 237 + y)) == (35, 36, 42) and \
-                                    a.getpixel((361 + z, 237 + y)) == (35, 36, 42):
+                                    elif original_photo.getpixel((112 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((195 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((278 + width, 237 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((361 + width, 237 + length)) == (35, 36, 42):
 
-                                        y += 166
-                                        z += -166
-                                        v += 1
+                                        length += 166
+                                        width += -166
+                                        doop_determinant += 1
 
-                                elif v % 2 == 0:
+                                elif doop_determinant % 2 == 0:
 
-                                    if a.getpixel((444 + z, -178 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, -95 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, -12 + y)) == (35, 36, 42) and \
-                                    a.getpixel((444 + z, 71 + y)) == (35, 36, 42):
+                                    if original_photo.getpixel((444 + width, -178 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, -95 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, -12 + length)) == (35, 36, 42) and \
+                                    original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42):
 
-                                        v += 1
-                                        y += -249
-                                print(v)
+                                        doop_determinant += 1
+                                        length += -249
+                                print(doop_determinant)
 
                     except Exception:
                         pass
 
-                u += 1
+                revolutions += 1
 
             except Exception:
                 pass
 
         w = 0
-        z = 0
-        y = 0
-        a = h.copy()
-        u = 0
-        v = 0
+        width = 0
+        length = 0
+        original_photo = sub_photo.copy()
+        revolutions = 0
+        doop_determinant = 0
 
-    while u != 120:
+    while revolutions != 120:
 
-        if a.getpixel((70, 1066 - 0)) != (35, 36, 42) and a.getpixel((153, 1066 - 0)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 0)) != (35, 36, 42) and a.getpixel((319, 1066 - 0)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 0)) != (35, 36, 42) and a.getpixel((485, 1066 - 0)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 0)) != (35, 36, 42) and a.getpixel((651, 1066 - 0)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 0)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 0)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 0)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 0)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 0)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 0)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 0)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 0)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 0))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 0))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            score += 100
 
-        if a.getpixel((70, 1066 - 83)) != (35, 36, 42) and a.getpixel((153, 1066 - 83)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 83)) != (35, 36, 42) and a.getpixel((319, 1066 - 83)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 83)) != (35, 36, 42) and a.getpixel((485, 1066 - 83)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 83)) != (35, 36, 42) and a.getpixel((651, 1066 - 83)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 83)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 83)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 83)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 83)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 83)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 83)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 83)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 83)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 83))
-            B = a.crop((65, 1066, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 83))
+            B = original_photo.crop((65, 1066, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066))
+            score += 100
 
-        if a.getpixel((70, 1066 - 166)) != (35, 36, 42) and a.getpixel((153, 1066 - 166)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 166)) != (35, 36, 42) and a.getpixel((319, 1066 - 166)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 166)) != (35, 36, 42) and a.getpixel((485, 1066 - 166)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 166)) != (35, 36, 42) and a.getpixel((651, 1066 - 166)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 166)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 166)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 166)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 166)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 166)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 166)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 166)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 166)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 166))
-            B = a.crop((65, 1066 - 83, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 83))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 166))
+            B = original_photo.crop((65, 1066 - 83, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 83))
+            score += 100
 
-        if a.getpixel((70, 1066 - 249)) != (35, 36, 42) and a.getpixel((153, 1066 - 249)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 249)) != (35, 36, 42) and a.getpixel((319, 1066 - 249)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 249)) != (35, 36, 42) and a.getpixel((485, 1066 - 249)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 249)) != (35, 36, 42) and a.getpixel((651, 1066 - 249)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 249)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 249)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 249)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 249)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 249)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 249)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 249)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 249)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 249))
-            B = a.crop((65, 1066 - 166, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
+            A = original_photo.crop((65, 67, 734, 1063 - 249))
+            B = original_photo.crop((65, 1066 - 166, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
             B.paste((B), (65, 1066 - 166))
-            n += 100
+            score += 100
 
-        if a.getpixel((70, 1066 - 332)) != (35, 36, 42) and a.getpixel((153, 1066 - 332)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 332)) != (35, 36, 42) and a.getpixel((319, 1066 - 332)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 332)) != (35, 36, 42) and a.getpixel((485, 1066 - 332)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 332)) != (35, 36, 42) and a.getpixel((651, 1066 - 332)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 332)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 332)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 332)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 332)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 332)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 332)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 332)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 332)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 332))
-            B = a.crop((65, 1066 - 249, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 249))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 332))
+            B = original_photo.crop((65, 1066 - 249, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 249))
+            score += 100
 
-        if a.getpixel((70, 1066 - 415)) != (35, 36, 42) and a.getpixel((153, 1066 - 415)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 415)) != (35, 36, 42) and a.getpixel((319, 1066 - 415)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 415)) != (35, 36, 42) and a.getpixel((485, 1066 - 415)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 415)) != (35, 36, 42) and a.getpixel((651, 1066 - 415)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 415)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 415)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 415)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 415)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 415)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 415)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 415)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 415)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 415))
-            B = a.crop((65, 1066 - 332, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 332))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 415))
+            B = original_photo.crop((65, 1066 - 332, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 332))
+            score += 100
 
-        if a.getpixel((70, 1066 - 498)) != (35, 36, 42) and a.getpixel((153, 1066 - 498)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 498)) != (35, 36, 42) and a.getpixel((319, 1066 - 498)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 498)) != (35, 36, 42) and a.getpixel((485, 1066 - 498)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 498)) != (35, 36, 42) and a.getpixel((651, 1066 - 498)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 498)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 498)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 498)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 498)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 498)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 498)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 498)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 498)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 498))
-            B = a.crop((65, 1066 - 415, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 415))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 498))
+            B = original_photo.crop((65, 1066 - 415, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 415))
+            score += 100
 
-        if a.getpixel((70, 1066 - 581)) != (35, 36, 42) and a.getpixel((153, 1066 - 581)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 581)) != (35, 36, 42) and a.getpixel((319, 1066 - 581)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 581)) != (35, 36, 42) and a.getpixel((485, 1066 - 581)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 581)) != (35, 36, 42) and a.getpixel((651, 1066 - 581)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 581)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 581)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 581)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 581)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 581)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 581)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 581)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 581)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 581))
-            B = a.crop((65, 1066 - 498, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 498))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 581))
+            B = original_photo.crop((65, 1066 - 498, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 498))
+            score += 100
 
-        if a.getpixel((70, 1066 - 664)) != (35, 36, 42) and a.getpixel((153, 1066 - 664)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 664)) != (35, 36, 42) and a.getpixel((319, 1066 - 664)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 664)) != (35, 36, 42) and a.getpixel((485, 1066 - 664)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 664)) != (35, 36, 42) and a.getpixel((651, 1066 - 664)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 664)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 664)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 664)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 664)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 664)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 664)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 664)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 664)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 664))
-            B = a.crop((65, 1066 - 581, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 581))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 664))
+            B = original_photo.crop((65, 1066 - 581, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 581))
+            score += 100
 
-        if a.getpixel((70, 1066 - 747)) != (35, 36, 42) and a.getpixel((153, 1066 - 747)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 747)) != (35, 36, 42) and a.getpixel((319, 1066 - 747)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 747)) != (35, 36, 42) and a.getpixel((485, 1066 - 747)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 747)) != (35, 36, 42) and a.getpixel((651, 1066 - 747)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 747)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 747)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 747)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 747)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 747)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 747)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 747)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 747)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 747))
-            B = a.crop((65, 1066 - 664, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 664))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 747))
+            B = original_photo.crop((65, 1066 - 664, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 664))
+            score += 100
 
-        if a.getpixel((70, 1066 - 830)) != (35, 36, 42) and a.getpixel((153, 1066 - 830)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 830)) != (35, 36, 42) and a.getpixel((319, 1066 - 830)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 830)) != (35, 36, 42) and a.getpixel((485, 1066 - 830)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 830)) != (35, 36, 42) and a.getpixel((651, 1066 - 830)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 830)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 830)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 830)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 830)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 830)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 830)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 830)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 830)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 830))
-            B = a.crop((65, 106 - 7476, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 747))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 830))
+            B = original_photo.crop((65, 106 - 7476, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 747))
+            score += 100
 
-        if a.getpixel((70, 1066 - 913)) != (35, 36, 42) and a.getpixel((153, 1066 - 913)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 913)) != (35, 36, 42) and a.getpixel((319, 1066 - 913)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 913)) != (35, 36, 42) and a.getpixel((485, 1066 - 913)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 913)) != (35, 36, 42) and a.getpixel((651, 1066 - 913)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 913)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 913)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 913)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 913)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 913)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 913)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 913)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 913)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 913))
-            B = a.crop((65, 1066 - 830, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 830))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 913))
+            B = original_photo.crop((65, 1066 - 830, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 830))
+            score += 100
 
-        if a.getpixel((70, 1066 - 996)) != (35, 36, 42) and a.getpixel((153, 1066 - 996)) != (35, 36, 42)\
-        and a.getpixel((236, 1066 - 996)) != (35, 36, 42) and a.getpixel((319, 1066 - 996)) != (35, 36, 42)\
-        and a.getpixel((402, 1066 - 996)) != (35, 36, 42) and a.getpixel((485, 1066 - 996)) != (35, 36, 42)\
-        and a.getpixel((568, 1066 - 996)) != (35, 36, 42) and a.getpixel((651, 1066 - 996)) != (35, 36, 42):
+        if original_photo.getpixel((70, 1066 - 996)) != (35, 36, 42) and original_photo.getpixel((153, 1066 - 996)) != (35, 36, 42)\
+        and original_photo.getpixel((236, 1066 - 996)) != (35, 36, 42) and original_photo.getpixel((319, 1066 - 996)) != (35, 36, 42)\
+        and original_photo.getpixel((402, 1066 - 996)) != (35, 36, 42) and original_photo.getpixel((485, 1066 - 996)) != (35, 36, 42)\
+        and original_photo.getpixel((568, 1066 - 996)) != (35, 36, 42) and original_photo.getpixel((651, 1066 - 996)) != (35, 36, 42):
 
-            A = a.crop((65, 67, 734, 1063 - 996))
-            B = a.crop((65, 1066 - 913, 736, 1151))
-            a.paste((30, 31, 37), (0, 0, 801, 1216))
-            a.paste((28, 29, 35), (5, 5, 796, 1211))
-            a.paste((26, 27, 33), (10, 10, 791, 1206))
-            a.paste((25, 26, 32), (15, 15, 786, 1201))
-            a.paste((26, 27, 33), (55, 55, 746, 1161))
-            a.paste((27, 28, 34), (60, 60, 741, 1156))
-            a.paste((30, 31, 37), (65, 65, 736, 1151))
-            a.paste((35, 36, 42), (70, 70, 731, 1146))
-            a.paste((30, 31, 37), (150, 70, 153, 1146))
-            a.paste((30, 31, 37), (233, 70, 236, 1146))
-            a.paste((30, 31, 37), (316, 70, 319, 1146))
-            a.paste((30, 31, 37), (399, 70, 402, 1146))
-            a.paste((30, 31, 37), (482, 70, 485, 1146))
-            a.paste((30, 31, 37), (565, 70, 568, 1146))
-            a.paste((30, 31, 37), (648, 70, 651, 1146))
-            a.paste((30, 31, 37), (70, 150, 731, 153))
-            a.paste((30, 31, 37), (70, 233, 731, 236))
-            a.paste((30, 31, 37), (70, 316, 731, 319))
-            a.paste((30, 31, 37), (70, 399, 731, 402))
-            a.paste((30, 31, 37), (70, 482, 731, 485))
-            a.paste((30, 31, 37), (70, 565, 731, 568))
-            a.paste((30, 31, 37), (70, 648, 731, 651))
-            a.paste((30, 31, 37), (70, 731, 731, 734))
-            a.paste((30, 31, 37), (70, 814, 731, 817))
-            a.paste((30, 31, 37), (70, 897, 731, 900))
-            a.paste((30, 31, 37), (70, 980, 731, 983))
-            a.paste((30, 31, 37), (70, 1063, 731, 1066))
-            a.paste((A), (65, 150))
-            a.paste((B), (65, 1066 - 913))
-            n += 100
+            A = original_photo.crop((65, 67, 734, 1063 - 996))
+            B = original_photo.crop((65, 1066 - 913, 736, 1151))
+            original_photo.paste((30, 31, 37), (0, 0, 801, 1216))
+            original_photo.paste((28, 29, 35), (5, 5, 796, 1211))
+            original_photo.paste((26, 27, 33), (10, 10, 791, 1206))
+            original_photo.paste((25, 26, 32), (15, 15, 786, 1201))
+            original_photo.paste((26, 27, 33), (55, 55, 746, 1161))
+            original_photo.paste((27, 28, 34), (60, 60, 741, 1156))
+            original_photo.paste((30, 31, 37), (65, 65, 736, 1151))
+            original_photo.paste((35, 36, 42), (70, 70, 731, 1146))
+            original_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            original_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            original_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            original_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            original_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            original_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            original_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            original_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            original_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            original_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            original_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            original_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            original_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            original_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            original_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            original_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            original_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            original_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            original_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            original_photo.paste((A), (65, 150))
+            original_photo.paste((B), (65, 1066 - 913))
+            score += 100
 
-        u += 1
+        revolutions += 1
