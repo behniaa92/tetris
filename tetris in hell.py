@@ -1,4 +1,4 @@
-from PIL import Image
+﻿from PIL import Image
 from random import choice
 from inputimeout import inputimeout
 
@@ -552,7 +552,6 @@ while the_starting_point == True:
                     sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
                     sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
                     length += 83
-                    w += 1
                     sub_photo.show()
 
                     try:
@@ -652,7 +651,8 @@ while the_starting_point == True:
                     except Exception:
                         pass
 
-                while original_photo.getpixel((320 + width, 320 + length)) == (35, 36, 42) and doop_determinant % 2 == 1:
+                while original_photo.getpixel((320 + width, 320 + length)) == (35, 36, 42) and \
+                doop_determinant % 2 == 1:
 
                     sub_photo = original_photo.copy()
                     sub_photo.paste((255, 223, 0), (319 + width, 70 + length, 399 + width, 399 + length))
@@ -770,7 +770,6 @@ while the_starting_point == True:
 
                                         doop_determinant += 1
                                         length += -249
-                                print(doop_determinant)
 
                     except Exception:
                         pass
@@ -780,7 +779,69 @@ while the_starting_point == True:
             except Exception:
                 pass
 
-        w = 0
+        width = 0
+        length = 0
+        original_photo = sub_photo.copy()
+        revolutions = 0
+        doop_determinant = 0
+
+    if random_shape == 5:
+
+        while original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+        original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+        original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+        original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+            sub_photo = original_photo.copy()
+            sub_photo.paste((64, 224, 208), (319 + width, 70 + length, 482 + width, 233 + length))
+            sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            length += 83
+            sub_photo.show()
+
+            try:
+
+                answer = inputimeout(timeout=1.4)
+                for i in range(len(answer)):
+
+                    if answer[i] == 'd':
+
+                        if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                        original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                        original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                        original_photo.getpixel((527 + width, 154 + length)) == (35, 36, 42):
+
+                            width += 83
+
+                    elif answer[i] == 'a':
+
+                        if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                        original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                        original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                        original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
+
+                            width += -83
+
+            except Exception:
+                pass
+
         width = 0
         length = 0
         original_photo = sub_photo.copy()
