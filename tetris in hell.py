@@ -43,7 +43,7 @@ while the_starting_point == True:
     width = 0
     length = 0
     revolutions = 0
-    doop_determinant = 0
+    doop_determinant = 4
 
     if random_shape == 1:
 
@@ -291,7 +291,7 @@ while the_starting_point == True:
         original_photo = sub_photo.copy()
         sub_photo = None
         revolutions = 0
-        doop_determinant = 0
+        doop_determinant = 4
 
     if random_shape == 3:
 
@@ -515,7 +515,7 @@ while the_starting_point == True:
         original_photo = sub_photo.copy()
         sub_photo = None
         revolutions = 0
-        doop_determinant = 0
+        doop_determinant = 4
 
     if random_shape == 4:
 
@@ -783,7 +783,7 @@ while the_starting_point == True:
         length = 0
         original_photo = sub_photo.copy()
         revolutions = 0
-        doop_determinant = 0
+        doop_determinant = 4
 
     if random_shape == 5:
 
@@ -846,7 +846,182 @@ while the_starting_point == True:
         length = 0
         original_photo = sub_photo.copy()
         revolutions = 0
-        doop_determinant = 0
+
+    if random_shape == 6:
+
+        while original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+        original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+        original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+        doop_determinant % 4 == 0:
+
+            sub_photo = original_photo.copy()
+            sub_photo.paste((186, 85, 211), (319 + width, 70 + length, 482 + width, 233 + length))
+            sub_photo.paste((35, 36, 42), (319 + width, 70 + length, 399 + width, 150 + length))
+            sub_photo.paste((30, 31, 37), (150, 70, 153, 1146))
+            sub_photo.paste((30, 31, 37), (233, 70, 236, 1146))
+            sub_photo.paste((30, 31, 37), (316, 70, 319, 1146))
+            sub_photo.paste((30, 31, 37), (399, 70, 402, 1146))
+            sub_photo.paste((30, 31, 37), (482, 70, 485, 1146))
+            sub_photo.paste((30, 31, 37), (565, 70, 568, 1146))
+            sub_photo.paste((30, 31, 37), (648, 70, 651, 1146))
+            sub_photo.paste((30, 31, 37), (70, 150, 731, 153))
+            sub_photo.paste((30, 31, 37), (70, 233, 731, 236))
+            sub_photo.paste((30, 31, 37), (70, 316, 731, 319))
+            sub_photo.paste((30, 31, 37), (70, 399, 731, 402))
+            sub_photo.paste((30, 31, 37), (70, 482, 731, 485))
+            sub_photo.paste((30, 31, 37), (70, 565, 731, 568))
+            sub_photo.paste((30, 31, 37), (70, 648, 731, 651))
+            sub_photo.paste((30, 31, 37), (70, 731, 731, 734))
+            sub_photo.paste((30, 31, 37), (70, 814, 731, 817))
+            sub_photo.paste((30, 31, 37), (70, 897, 731, 900))
+            sub_photo.paste((30, 31, 37), (70, 980, 731, 983))
+            sub_photo.paste((30, 31, 37), (70, 1063, 731, 1066))
+            length += 83
+            sub_photo.show()
+
+            try:
+
+                answer = inputimeout(timeout=1.4)
+                for i in range(len(answer)):
+
+                    if answer[i] == 'd':
+
+                        if doop_determinant % 4 == 0:
+
+                            if original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((527 + width, 154 + length)) == (35, 36, 42):
+
+                                width += 83
+
+                        elif doop_determinant % 4 == 1:
+
+                            if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((527 + width, 154 + length)) == (35, 36, 42):
+
+                                width += 83
+
+                        elif doop_determinant % 4 == 2:
+
+                            if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+                                width += 83
+
+                        elif doop_determinant % 4 == 3:
+
+                            if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((527 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((527 + width, 154 + length)) == (35, 36, 42):
+
+                                width += 83
+
+                    elif answer[i] == 'a':
+
+                        if doop_determinant % 4 == 0:
+
+                            if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
+
+                                width += -83
+
+                        elif doop_determinant % 4 == 1:
+
+                            if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
+
+                                width += -83
+
+                        elif doop_determinant % 4 == 2:
+
+                            if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((278 + width, 154 + length)) == (35, 36, 42):
+
+                                width += -83
+
+                        elif doop_determinant % 4 == 3:
+
+                            if original_photo.getpixel((278 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
+
+                                width += -83
+
+                    elif answer[i] == 's':
+
+                        if doop_determinant % 4 == 0:
+
+                            if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += -3
+
+                        elif doop_determinant % 4 == 1:
+
+                            if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += -3
+
+                        elif doop_determinant % 4 == 2:
+
+                            if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += -3
+
+                        elif doop_determinant % 4 == 3:
+
+                            if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += -3
+
+                    elif answer[i] == 'w':
+
+                        if doop_determinant % 4 == 0:
+
+                            if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += 1
+
+                        elif doop_determinant % 4 == 1:
+
+                            if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += 1
+
+                        elif doop_determinant % 4 == 2:
+
+                            if original_photo.getpixel((361 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += 1
+
+                        elif doop_determinant % 4 == 3:
+
+                            if original_photo.getpixel((444 + width, 71 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((361 + width, 154 + length)) == (35, 36, 42) and \
+                            original_photo.getpixel((444 + width, 154 + length)) == (35, 36, 42):
+
+                                doop_determinant += 1
+
+            except Exception:
+                pass
 
     while revolutions != 120:
 
